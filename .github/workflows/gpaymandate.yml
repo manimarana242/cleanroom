@@ -7,6 +7,12 @@ on:
       - feature/thirdbranch
   pull_request:
 
+  workflow_dispatch:
+   inputs:
+          name:
+            description: 'Your name'
+            required: true
+            default: 'World'
 jobs:
   build:
     runs-on: ubuntu-latest
