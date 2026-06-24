@@ -48,3 +48,17 @@ jobs:
       - name: Deploy
         run: |
           echo "Add your deployment commands here"       
+   
+          environment:
+      - name: Approvals
+        run: echo "Deployment approved"
+
+      - name: Show Login ID
+        run: echo "${{ secrets.LOGIN_ID }}"      
+
+      - name: Login
+        run: |
+          USERNAME="${{ secrets.LOGIN_ID }}"
+          PASSWORD="${{ secrets.LOGIN_PASSWORD }}"
+
+          echo "Login process started"
