@@ -21,6 +21,12 @@ jobs:
           ls -la
           find . -type f
 
+      - name: Show secondfile contents
+        run: cat secondfile.txt  
+
+      - name: Show Python file
+        run: cat third-mandate.py
+
       - name: Run tests
         run: |
           echo "Add your build/test commands here"
