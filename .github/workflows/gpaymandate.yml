@@ -1,1 +1,26 @@
+name: CI Pipeline
 
+on:
+  push:
+    branches:
+      - master
+      - feature/thirdbranch
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show files
+        run: |
+          pwd
+          ls -la
+          find . -type f
+
+      - name: Run tests
+        run: |
+          echo "Add your build/test commands here"
