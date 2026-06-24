@@ -51,13 +51,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy
-        run: echo "Deployment approved"
         run: |
+          echo "Deployment approved"
           echo "Add your deployment commands here"       
    
-          environment:
-      - name: Approvals
-        run: echo "Deployment approved"
 
       - name: Show Login ID
         run: echo "${{ secrets.LOGIN_ID }}"      
